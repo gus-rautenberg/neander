@@ -61,6 +61,7 @@ architecture superCalc of ULAinterno is
     end component;
     
     --mux5x8
+    
 
     -- modulo detector NZ
 
