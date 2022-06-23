@@ -1,18 +1,18 @@
 #library ieee;
 
-entity flagnz is
+entity flagNZ is
+    port(
         clk, reset : std_logic;
-        datain :
+        dataIN : in std_logic_vector(1 downto 0);
+        ac_nrw : in std_logic;
+        dataOUT : out std_logic_vector(1 downto 0);
+    )
+end entity;
 
-
-
-
-
-architecture status of flagnz is
-
+architecture status of flagNZ is
     component ffd is
         port(
-            datain : std_logic;
+            dataIN : std_logic;
             clk, pr, cl : std_logic;
             dataout: std_logic
         );
