@@ -20,6 +20,7 @@ begin
          sadd when sel = "001" else
          sor when sel = "010" else
          sand when sel = "011" else
-         snot when sel = "100";
+         snot when sel = "100" else
+         (others => 'Z'); "ZZZZZZZZ";
 
 end architecture;
