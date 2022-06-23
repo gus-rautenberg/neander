@@ -26,8 +26,8 @@ architecture reg1bit of flagnz is
     -- signal ref_d, s_d : std_logic_vector(1 downto 0);
 begin
     --flag N
-    u_ffdN : regCarga1bit port map(d(1), clk, cl, nrw, s(1));
+    u_ffdN : regCarga1bit port map(d(1), clk, pr, cl, nrw, s(1));
     -- flag Z
-    u_ffZ  : regCarga1bit port map(d(0), clk, cl, nrw, s(0));
+    u_ffZ  : regCarga1bit port map(d(0), clk, cl, pr, nrw, s(0));
 
 end architecture
