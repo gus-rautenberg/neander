@@ -23,13 +23,63 @@ architecture superCalc of ULAinterno is
     signal s_add : std_logic_vector(7 downto 0); -- sinal da add
     signal s_cout : std_logic; -- sinal do cout, parte do ADDmod
 
-    begin
-        --modulo not
+    
+    --modulo and, not
+    component modAND is
+        port(
+            X : in std_logic_vector(7 downto 0);
+            Y : in std_logic_vector(7 downto 0);
+            sAND : out std_logic_vector(7 downto 0)
+        );
+    end component;
 
+    component modNOT is
+        port(
+            X : in std_logic_vector(7 downto 0);
+            notX : out std_logic_vector(7 downto 0)
+        );
+    end component;
+
+    --modulo add
+    component modADD is
+        port(
+            A : in std_logic_vector(7 downto 0);
+            B : in std_logic_vector(7 downto 0);
+            Cin_geral : in std_logic;
+            ZOut : out std_logic_vector(7 downto 0);
+            Cout_geral : out std_logic
+        );
+    end component; 
+
+    --modulo or
+    component modOR is
+        port(
+            X : in std_logic_vector(7 downto 0);
+            Y : in std_logic_vector(7 downto 0);
+            sOR : out std_logic_vector(7 downto 0)
+        );
+    end component;
+    
+    --mux5x8
+
+    -- modulo detector NZ
+
+    begin
+
+        u_not : Notmod port map(x, s_not);
+	    u_and : ANDmod port map(x, y, s_and);
+	    u_or : ORmod port map(x, y, s_or);
+	    u_add : ADDmod port map(x, y, '0', s_add, s_cout);
+	    u_mux5x8 : mux5x8 port map(y, s_add, s_or, s_and, s_not, ula_op, s_resultado);
+	
+        -- modulo detector NZ
+        flagNZ(1) <= s_resultado(7); -- flags
+
+
+
+        --modulo not
+    
         --modulo and, not
         
         --modulo add
         -- u_adder : faad
-
-        -- modulo detector NZ
-        flagNZ(1) <= 
