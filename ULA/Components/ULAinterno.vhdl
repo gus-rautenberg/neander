@@ -61,20 +61,31 @@ architecture superCalc of ULAinterno is
     end component;
     
     --mux5x8
-    
+    component mux5x8 is
+        port(
+            sy : in std_logic_vector(7 downto 0);
+            sadd : in std_logic_vector(7 downto 0);
+            sor : in std_logic_vector(7 downto 0);
+            sand : in std_logic_vector(7 downto 0);
+            snot : in std_logic_vector(7 downto 0);
+            sel : in std_logic_vector(2 downto 0);
+            saidaMUX : out std_logic_vector(7 downto 0)
+        );
+        end component;
 
     -- modulo detector NZ
 
     begin
 
-        u_not : Notmod port map(x, s_not);
-	    u_and : ANDmod port map(x, y, s_and);
-	    u_or : ORmod port map(x, y, s_or);
-	    u_add : ADDmod port map(x, y, '0', s_add, s_cout);
+        u_not : modNOT port map(x, s_not);
+	    u_and : modAND port map(x, y, s_and);
+	    u_or : modOR port map(x, y, s_or);
+	    u_add : modADD port map(x, y, '0', s_add, s_cout);
 	    u_mux5x8 : mux5x8 port map(y, s_add, s_or, s_and, s_not, ula_op, s_resultado);
 	
         -- modulo detector NZ
-        flagNZ(1) <= s_resultado(7); -- flags
+        flagsNZ(1) <= s_resultado(7); -- flags
+        flagsNZ(0) <= not(s_resultado(7) or s_resultado(6) or s_resultado(5) or s_resultado(4) or s_resultado(3) or s_resultado(2) or s_resultado(1) or s_resultado(0));
 
 
 
