@@ -23,15 +23,11 @@ architecture reg1bit of flagnz is
 		);
 	end component regCarga1bit;
 
-    signal ref_d, s_d : std_logic_vector(1 downto 0);
-
-    begin
+    -- signal ref_d, s_d : std_logic_vector(1 downto 0);
+begin
     --flag N
-    u_ffdN : regCarga1bit port map(reg_d, clk, '1', reset, s_d(1));
+    u_ffdN : regCarga1bit port map(d(1), clk, pr, cl, nrw, s(1));
     -- flag Z
-    u_ffZ  : regCarga1bit port map(reg_d(0), clk, reset, '1', s_d(0));
-
-    --mux
-    dataout <= s_d;
+    u_ffZ  : regCarga1bit port map(d(0), clk, cl, pr, nrw, s(0));
 
 end architecture
