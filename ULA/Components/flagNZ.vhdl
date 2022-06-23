@@ -24,8 +24,7 @@ architecture reg1bit of flagnz is
 	end component regCarga1bit;
 
     signal ref_d, s_d : std_logic_vector(1 downto 0);
-
-    begin
+begin
     --flag N
     u_ffdN : regCarga1bit port map(reg_d, clk, '1', reset, s_d(1));
     -- flag Z
