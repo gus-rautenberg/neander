@@ -13,7 +13,7 @@ port(
         );
 end entity;
 
-architecture  of mux5x8 is
+architecture bhvr of mux5x8 is
 begin
 
          saidaMUX <= sy when sel = "000" else

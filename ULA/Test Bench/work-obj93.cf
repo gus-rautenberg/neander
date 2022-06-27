@@ -1,0 +1,4 @@
+v 4
+file . "tb_regCarga.vhdl" "e326963f78ace5e6ea2e1a3ef07726a18e756774" "20220627010655.620":
+  entity tb_reg at 1( 0) + 0 on 11;
+  architecture behavior of tb_reg at 7( 74) + 0 on 12;

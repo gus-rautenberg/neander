@@ -6,7 +6,7 @@ entity regCarga1bit is
 		d      : in  std_logic;
 		clock  : in  std_logic;
 		pr, cl : in  std_logic;
-		nrw  : in  std_logic;
+		nrw    : in  std_logic;
 		s      : out std_logic
 	);
 end regCarga1bit;
