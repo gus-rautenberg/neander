@@ -10,6 +10,6 @@ end entity;
 
 architecture sum of fadder is
 begin
-    S    <= (A xor B) xor Cin after lat;
-    Cout <= (A and B) or (A and Cin) or (B and Cin) after lat;
+    S    <= (A xor B) xor Cin;
+    Cout <= (A and B) or (A and Cin) or (B and Cin);
 end architecture;
