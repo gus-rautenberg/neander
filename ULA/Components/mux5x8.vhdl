@@ -13,13 +13,14 @@ port(
         );
 end entity;
 
-architecture  of mux5x8 is
+architecture bhvr of mux5x8 is
 begin
 
          saidaMUX <= sy when sel = "000" else
          sadd when sel = "001" else
          sor when sel = "010" else
          sand when sel = "011" else
-         snot when sel = "100";
+         snot when sel = "100" else
+         (others => 'Z'); "ZZZZZZZZ";
 
 end architecture;
