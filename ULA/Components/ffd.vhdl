@@ -13,12 +13,12 @@ end ffd;
 architecture ff of ffd is
 
 component ffjk is
-	port(
-		j, k   : in  std_logic;
-		clock  : in  std_logic;
-		pr, cl : in  std_logic;
-		q, nq  : out std_logic
-	);
+    port(
+        j, k   : in std_logic;
+        clk    : in std_logic;
+        pr, cl : in std_logic;
+        q, nq  : out std_logic
+    );
 end component;
 
 signal nd : std_logic;

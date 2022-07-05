@@ -34,8 +34,6 @@ begin
         wait for ciclo_clock;
 
         scl <= '1';
-        wait for ciclo_clock;
-
         s_dataIn <= "10010010";
         s_nrw    <= '1';
         wait for ciclo_clock;
