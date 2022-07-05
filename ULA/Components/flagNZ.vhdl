@@ -5,8 +5,8 @@ entity flagnz is
 	port(
 		d      : in  std_logic_vector(1 downto 0);
 		clock  : in  std_logic;
-		pr, cl : in  std_logic;
-		nrw    : in  std_logic;
+		cl : in  std_logic;
+		ac_nrw    : in  std_logic;
 		s      : out std_logic_vector(1 downto 0)
 	);
 end entity flagnz;
@@ -26,8 +26,8 @@ architecture reg1bit of flagnz is
     -- signal ref_d, s_d : std_logic_vector(1 downto 0);
 begin
     --flag N
-    u_ffdN : regCarga1bit port map(d(1), clock, pr, cl, nrw, s(1));
+    u_ffdN : regCarga1bit port map(d(1), clock, '1', cl, ac_nrw, s(1));
     -- flag Z
-    u_ffZ  : regCarga1bit port map(d(0), clock, cl, pr, nrw, s(0));
+    u_ffZ  : regCarga1bit port map(d(0), clock, cl, '1', ac_nrw, s(0));
 
 end architecture;
