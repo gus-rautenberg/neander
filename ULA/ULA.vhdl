@@ -14,7 +14,7 @@ entity moduloUlA is
         ula_op : in std_logic_vector(2 downto 0);
         
         --status
-        flagsNZ : out std_logic_vector(1 downto 0);
+        flagsNZ : out std_logic_vector(1 downto 0)
 
         
     );
@@ -35,11 +35,11 @@ begin
 
     -- u_ULAinterna : ULA_ALU portmap();
 
-    barramento <= s_ac2ula when man_nrw='1'
-        else(others <='Z')
-        -- lista de signals
-    signal s_ac2ula, s_ula2ac : std_logic_vector(7 downto 0);
-    signal s_ac2flags : std_logic_vector(1 downto 0);
+    barramento <= s_ac2ula when man_nrw = '1'  
+        else(others <= 'Z'); --Erro aqui
+        lista de signals
+    signal s_ac2ula, s_ula2ac : std_logic_vector(7 downto 0);    -- Erro aqui
+    signal s_ac2flags : std_logic_vector(1 downto 0);            -- Erro aqui
 
 
     end architecture;
