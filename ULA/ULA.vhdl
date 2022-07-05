@@ -14,8 +14,7 @@ entity moduloUlA is
         ula_op : in std_logic_vector(2 downto 0);
         
         --status
-        flagsNZ : out std_logic_vector(1 downto 0);
-
+        flagsNZ : out std_logic_vector(1 downto 0)
         
     );
 
