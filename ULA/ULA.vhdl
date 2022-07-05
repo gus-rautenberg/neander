@@ -12,10 +12,8 @@ entity moduloUlA is
         ac_nrw : in std_logic;
         mem_nrw :  in std_logic;
         ula_op : in std_logic_vector(2 downto 0);
-        
         --status
         flagsNZ : out std_logic_vector(1 downto 0)
-        
     );
 
     end entity;
