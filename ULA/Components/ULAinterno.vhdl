@@ -1,20 +1,20 @@
 -- -- modulo ULA para NEANDER
--- library ieee;
--- use ieee.std_logic_1164.all;
+library ieee;
+use ieee.std_logic_1164.all;
 
--- entity ULAinterno is
---     port(
---         -- dados
---         x, y; in std_logic_vector(7 downto 0);
---         s : out std_logic_vector(7 downto 0);
---         --controle
---         ula_op : in std_logic_vector (2 downto 0);
---         --status
---         flagsNZ : out std_logic_vector (1 downto 0);
---     );
--- end entity;
+entity ULAinterno is
+    port(
+        -- dados
+        x, y : in std_logic_vector(7 downto 0);
+        s : out std_logic_vector(7 downto 0);
+        --controle
+        ula_op : in std_logic_vector (2 downto 0);
+        --status
+        flagsNZ : out std_logic_vector (1 downto 0)
+    );
+end entity;
 
--- architecture superCalc of ULAinterno is
+architecture superCalc of ULAinterno is
 
 --     signal s_resultado : std_logic_vector(7 downto 0);
 --     signal s_not : std_logic_vector(7 downto 0); -- sinal da not
@@ -75,7 +75,7 @@
 
 --     -- modulo detector NZ
 
---     begin
+begin
 
 --         u_not : modNOT port map(x, s_not);
 -- 	    u_and : modAND port map(x, y, s_and);
@@ -95,3 +95,4 @@
         
 --         --modulo add
 --         -- u_adder : faad
+end architecture;

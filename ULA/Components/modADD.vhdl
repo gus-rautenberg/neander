@@ -1,7 +1,7 @@
 library ieee;
 use ieee.std_logic_1164.all;
 
-entity modAND is
+entity modADD is
 	port(
 		A : in std_logic_vector(7 downto 0);
 		B : in std_logic_vector(7 downto 0);
@@ -11,7 +11,7 @@ entity modAND is
 	);
 end;
 
-architecture comuta of modAND is
+architecture comuta of modADD is
 	
 	component f_ADDER is
 	port(
