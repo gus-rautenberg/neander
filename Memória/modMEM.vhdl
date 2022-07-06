@@ -31,3 +31,18 @@ architecture behavior of mem is
     signal s_mux2rem, s_mem2rdm, s_rdm2barramento : std_logic_vector(7 downto 0);
     signal s_rem2mem : std_logic_vector(7 downto 0) := (others => '0');
 begin
+
+    -- MUX 2x8
+    u_mux : mux2x8 port map (END_barr, END_pc, barr_PC, s_mux2rem);
+
+    -- REM
+    u_rem : regCarga8bit port map (s_mux2rem,REM_rw, cl, clk, s_rem2mem);
+
+    -- RDM
+    u_rdm : regCarga8bit port map(s_mem2rdm, RDM_rw, '1', cl, clk, s_rdm2barramento);
+
+    -- MEM
+    u_mem : as_ram port map(s_rem2mem,s_mem2rdm, MEM_nrw, cl);
+
+
+    end architecture;
