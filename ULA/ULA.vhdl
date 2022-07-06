@@ -15,14 +15,10 @@ entity moduloUlA is
         
         --status
         flagsNZ : out std_logic_vector(1 downto 0)
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/gustavo
         
     );
 
-    end entity;
+end entity;
 
 architecture calculater of moduloULA is
     -- component registrador-> AC
@@ -72,4 +68,4 @@ begin
        
 
 
-    end architecture;
+end architecture;

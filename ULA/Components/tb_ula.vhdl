@@ -26,5 +26,6 @@ begin
     tb : process
     begin
         
-    end process
-end architecture
+    end process;
+    
+end architecture;

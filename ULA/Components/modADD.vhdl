@@ -9,7 +9,7 @@ entity modADD is
 		ZOut : out std_logic_vector(7 downto 0);
 		Cout_geral : out std_logic
 	);
-end;
+end entity;
 
 architecture comuta of modADD is
 	
@@ -24,6 +24,7 @@ architecture comuta of modADD is
 	end component;
 
 	signal Cout : std_logic_vector(7 downto 0);
+
 begin
 	u_adder0 : f_ADDER port map(A(0), B(0), Cin_geral, ZOut(0), Cout(0));
 	u_adder1 : f_ADDER port map(A(1), B(1), Cout(0), ZOut(1), Cout(1));
@@ -35,4 +36,4 @@ begin
 	u_adder7 : f_ADDER port map(A(7), B(7), Cout(6), ZOut(7), Cout(7));
 	Cout_geral <= Cout(7);
 	
-end;
+end architecture;

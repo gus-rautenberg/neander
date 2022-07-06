@@ -9,7 +9,7 @@ entity ac is
 		nrw    : in  std_logic;
 		s      : out std_logic_vector(7 downto 0)
 	);
-end entity ac;
+end entity;
 
 architecture reg1bit of ac is
 

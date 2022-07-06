@@ -9,7 +9,7 @@ entity regCarga1bit is
 		nrw    : in  std_logic;
 		s      : out std_logic
 	);
-end regCarga1bit;
+end entity;
 
 architecture reg1bit of regCarga1bit is
 
