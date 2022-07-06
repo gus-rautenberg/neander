@@ -7,7 +7,6 @@ entity modREM is
         clk, cl     : in std_logic;
         nrw         : in std_logic;
         endout      : out std_logic_vector(7 downto 0)
-
     );
 end entity;
 
