@@ -5,12 +5,12 @@ use ieee.std_logic_1164.all;
 entity mod_ula is
     port(
         -- dados
-        x, y; in std_logic_vector(7 downto 0);
+        x, y : in std_logic_vector(7 downto 0);
         s : out std_logic_vector(7 downto 0);
         --controle
         ula_op : in std_logic_vector (2 downto 0);
         --status
-        flagsNZ : out std_logic_vector (1 downto 0);
+        flagsNZ : out std_logic_vector (1 downto 0)
     );
 end entity;
 
@@ -89,13 +89,4 @@ begin
     flagsNZ(0) <= not(s_resultado(7) or s_resultado(6) or s_resultado(5) or s_resultado(4) or s_resultado(3) or s_resultado(2) or s_resultado(1) or s_resultado(0));
 
 
-end architecture superCalc;
-
-
-
-        --modulo not
-    
-        --modulo and, not
-        
-        --modulo add
-        -- u_adder : faad
+end architecture;
