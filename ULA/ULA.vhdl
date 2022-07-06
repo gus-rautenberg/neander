@@ -65,7 +65,5 @@ begin
     ULA: mod_ula port map(s_ac2ula, barramento,s_ula2ac,ULA_op,s_ac2flags);
     --MUX
     barramento <= s_ac2ula when men_nrw='1' else(others <='Z');
-       
-
 
 end architecture;

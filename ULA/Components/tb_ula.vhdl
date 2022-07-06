@@ -9,12 +9,9 @@ architecture behavior of tb_ula is
 
     component mod_ula is
         port(
-            -- dados
             x, y : in std_logic_vector(7 downto 0);
             s : out std_logic_vector(7 downto 0);
-            --controle
             ula_op : in std_logic_vector (2 downto 0);
-            --status
             flagsNZ : out std_logic_vector (1 downto 0)
         );
     end component;
