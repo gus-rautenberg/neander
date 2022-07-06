@@ -7,10 +7,10 @@ entity modAND is
         Y : in std_logic_vector(7 downto 0);
         sAND : out std_logic_vector(7 downto 0)
     );
-end;
+end entity;
 
 architecture comuta of modAND is
 
 begin
     sAND <= X and Y;
-end;
+end architecture;
