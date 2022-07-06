@@ -6,7 +6,7 @@ port(
     a:   in  std_logic_vector(7 downto 0);
     b:   in  std_logic_vector(7 downto 0);
     sel: in  std_logic;
-    z :  out std_logic_vector(7 downto 0);
+    z :  out std_logic_vector(7 downto 0)
 );
 end entity mux2x8;
 

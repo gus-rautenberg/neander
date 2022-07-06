@@ -1,8 +1,5 @@
--- ghdl -a *.vhdl ; ghdl -r tb_mem --wave=tb_mem.ghw --stop-time=300ns
-
 library ieee;
 use ieee.std_logic_1164.all;
-use ieee.numeric_std.all;
 
 entity tb_modMEM is
 end entity;
@@ -21,7 +18,7 @@ architecture mem_modulo of tb_modMEM is
 
     signal srst : std_logic := '1';
     signal sclk : std_logic := '0';
-    signal sEndPC, sEndBar, sbarramento          : std_logic_vector(7 downto 0);
+    signal sEndPC, sEndBar, sbarramento  : std_logic_vector(7 downto 0);
     signal sNBarPC, sREMrw, sMEMrw, sRDMrw  : std_logic;
 
 begin
@@ -52,3 +49,5 @@ begin
         wait; -- forever!
     end process;
 end architecture; 
+
+-- ghdl -a *.vhdl ; ghdl -r tb_mem --wave=tb_mem.ghw --stop-time=300ns
