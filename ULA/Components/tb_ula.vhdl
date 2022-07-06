@@ -7,15 +7,15 @@ end entity;
 architecture behavior of tb_ula is
     constant ciclo_clock : time := 20 ns;
 
-    component ULAinterno is
+    component mod_ula is
         port(
             -- dados
             x, y : in std_logic_vector(7 downto 0);
             s : out std_logic_vector(7 downto 0);
             --controle
-            ula_op : in std_logic_vector(2 downto 0);
+            ula_op : in std_logic_vector (2 downto 0);
             --status
-            flagsNZ : out std_logic_vector(1 downto 0)
+            flagsNZ : out std_logic_vector (1 downto 0)
         );
     end component;
 
@@ -24,13 +24,15 @@ architecture behavior of tb_ula is
     signal s_flags : std_logic_vector(1 downto 0);
 
 begin
+    
+    u_alu : mod_ula port map(s_acIn, s_barramento, s_saida, s_ulaOp, s_flags);
 
     tb : process
     begin
 
         s_acIn       <= "10110010";
-        s_barramento <= "00101101";
-        s_ulaOp      <= "001";
+        s_barramento <= "01001101";
+        s_ulaOp      <= "000";
         wait for ciclo_clock;
 
         s_ulaOp      <= "001";

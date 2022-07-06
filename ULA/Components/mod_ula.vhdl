@@ -88,5 +88,6 @@ begin
     flagsNZ(1) <= s_resultado(7); -- flags
     flagsNZ(0) <= not(s_resultado(7) or s_resultado(6) or s_resultado(5) or s_resultado(4) or s_resultado(3) or s_resultado(2) or s_resultado(1) or s_resultado(0));
 
+    s <= s_resultado;
 
 end architecture;
