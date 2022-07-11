@@ -1,0 +1,7 @@
+v 4
+file . "ULA.vhdl" "08ceaedb10bb314dab69e58bfba23c623ba00bc3" "20220711174719.221":
+  entity moduloula at 2( 27) + 0 on 13;
+  architecture calculater of moduloula at 21( 487) + 0 on 14;
+file . "tb_alu.vhdl" "6158042bd945674e4e8d587baf81d044ef4bbe8c" "20220711174719.219":
+  entity tb_alu at 1( 0) + 0 on 11;
+  architecture behavior of tb_alu at 7( 74) + 0 on 12;
