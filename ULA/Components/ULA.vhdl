@@ -60,8 +60,8 @@ begin
     -- u_AC : reg port map();
     u_AC : ac port map(s_ula2ac, clk, rsr, nrw, s_ac2ula);
 
-    -- u+flagsNZ : reg2 port map();
-    u_FLAGS: flagnz port map(s_ac2flags, clk, rsr, nrw, flagsNZ);
+    -- u_flagsNZ : reg2 port map();
+    u_FLAGS : flagnz port map(s_ac2flags, clk, rsr, nrw, flagsNZ);
     
     -- u_ULAinterna : ULA_ALU portmap();
     u_ULA: mod_ula port map(s_ac2ula, barramento, s_ula2ac, ULA_op, s_ac2flags);

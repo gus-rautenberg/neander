@@ -27,7 +27,8 @@ architecture latch of ffd is
     signal sd  : std_logic;
 begin
 
-    sd <= d when nrw='1' else sq;
+    sd <= d when nrw = '1' else sq;
+    
     u_td : ffjk port map(sd, nj, clk, pr, cl, q, nq);
     nj <= not(d);
 

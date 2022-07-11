@@ -38,16 +38,15 @@ begin
     begin
         srsr <= '0';
         s_barramento <= "01001101";
-        smem_nrw <= '0';
+        smem_nrw <= '1';
         s_nrw <= '0';
         sula_op <= "000";
         wait for ciclo_clock;
 
         srsr <= '1';
-        s_barramento <= "01001101";
         wait for ciclo_clock;
 
-        smem_nrw <= '1';
+        smem_nrw <= '0';
         s_nrw <= '0';
         wait for ciclo_clock;
         
@@ -64,10 +63,10 @@ begin
 
         s_barramento <= "00100101";
         s_nrw <= '1';
-        sula_op <= "101";
+        sula_op <= "011";
         wait for ciclo_clock;
 
-        s_barramento <= "10000000";
+        s_barramento <= "11111111";
         s_nrw <= '1';
         sula_op <= "000";
         wait for ciclo_clock;
@@ -78,7 +77,10 @@ begin
         wait for ciclo_clock;
     
         s_nrw <= '1';
-        wait for ciclo_clock*2;
+        wait for ciclo_clock;
+
+        s_nrw <= '0';
+        wait for ciclo_clock;
 
     end process;
 end architecture;
