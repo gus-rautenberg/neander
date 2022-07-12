@@ -7,10 +7,10 @@ entity modOR is
         Y : in std_logic_vector(7 downto 0);
         sOR : out std_logic_vector(7 downto 0)
     );
-end;
+end entity;
 
 architecture comuta of modOR is
 
 begin
     sOR <= X or Y;
-end;
+end architecture;

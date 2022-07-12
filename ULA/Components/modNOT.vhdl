@@ -6,10 +6,10 @@ entity modNOT is
         X : in std_logic_vector(7 downto 0);
         notX : out std_logic_vector(7 downto 0)
     );
-end;
+end entity;
 
 architecture comuta of modNOT is
 
 begin
     notX(7 downto 0) <= not X(7 downto 0);
-end;
+end architecture;
