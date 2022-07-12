@@ -12,9 +12,8 @@ entity moduloUlA is
         nrw : in std_logic; -- nrw serve pra flag e para ac
         mem_nrw :  in std_logic; -- pra que isso?
         ula_op : in std_logic_vector(2 downto 0);
-        
         --status
-        flagsNZ : out std_logic_vector(1 downto 0)  
+        flagsNZ : out std_logic_vector(1 downto 0)
     );
 end entity;
 
