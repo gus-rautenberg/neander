@@ -18,13 +18,13 @@ architecture mem_modulo of tb_modMEM is
 
     signal srst : std_logic := '1';
     signal sclk : std_logic := '0';
-    signal sEndPC, sEndBar, sbarramento  : std_logic_vector(7 downto 0);
-    signal sNBarPC, sREMrw, sMEMrw, sRDMrw  : std_logic;
+    signal sEndPC, sEndBarr, sBarramento  : std_logic_vector(7 downto 0);
+    signal sBarrPC, sRemNRW, sMemNRW, sRdmNRW  : std_logic;
 
 begin
     sclk <= not(sclk) after cicloClock / 2;
 
-    u_MEM : mem port map(sbarramento, sendPC, sendbar, sNBarPC,sREMrw, sMEMrw, sRDMrw,srst, sclk);
+    u_MEM : mem port map(sBarramento, sEndPC, sEndBarr, sBarrPC, sRemNRW, sMemNRW, sRdmNRW,srst, sclk);
 
     tb : process
     begin
@@ -33,16 +33,16 @@ begin
         wait for cicloClock;
         srst <= '1';
 
-        sNBarPC <= '1';
-        sREMrw <= '1';
-        sMEMrw <= '0';
-        sRDMrw <= '1';
+        sBarrPC <= '1';
+        sRemNrw <= '1';
+        sMemNrw <= '0';
+        sRdmNrw <= '1';
 
         -- Leitura na posição 0
         sEndPC <= "00000000";
         wait for cicloClock;
 
-        sMEMrw <= '1';
+        sMemNrw <= '1';
         sbarramento <= "00100000";
         wait for cicloClock;
 
