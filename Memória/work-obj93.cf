@@ -1,7 +1,22 @@
 v 4
-file . "as_ram.vhdl" "3f73ba77f28abe495e9836860db5e4964f04d021" "20210825193332.899":
-  entity as_ram at 2( 42) + 0 on 97;
-  architecture behavior of as_ram at 16( 325) + 0 on 98;
-file . "tb_as_ram.vhdl" "bfefe731229ad8ce9415f071d736bf321b0ab039" "20210825193332.908":
-  entity tb_as_ram at 1( 0) + 0 on 99;
-  architecture tb_behavior of tb_as_ram at 9( 126) + 0 on 100;
+file . "as_ram.vhdl" "2811f20d3bc32d8e87b519853c1407ca444819ca" "20220712130920.791":
+  entity as_ram at 2( 43) + 0 on 115;
+  architecture behavior of as_ram at 16( 340) + 0 on 116;
+file . "tb_as_ram.vhdl" "04e165513536588c28f6d08ec43a29afd5527ef6" "20220712130920.807":
+  entity tb_as_ram at 1( 0) + 0 on 125;
+  architecture tb_behavior of tb_as_ram at 9( 134) + 0 on 126;
+file . "ffd.vhdl" "c7ae18906a2861c772275b12a835e77b340c293d" "20220712130920.795":
+  entity ffd at 1( 0) + 0 on 117;
+  architecture latch of ffd at 14( 289) + 0 on 118;
+file . "modMEM.vhdl" "aa58cd65ea13410d59bb85be38aa079fb4a31cc6" "20220712130920.797":
+  entity mem at 1( 0) + 0 on 119;
+  architecture behavior of mem at 13( 364) + 0 on 120;
+file . "mux2x8.vhdl" "0ddeaa2c3ce99d567eb3896f4a88d8c29e4ad6bb" "20220712130920.800":
+  entity mux2x8 at 1( 0) + 0 on 121;
+  architecture behavior of mux2x8 at 13( 255) + 0 on 122;
+file . "regCarga8bits.vhdl" "1c6cb8550390e3c2cf4ecb7ac0293e187e68ff22" "20220712130920.804":
+  entity registrador_8 at 1( 0) + 0 on 123;
+  architecture registrador_comp of registrador_8 at 12( 256) + 0 on 124;
+file . "tb_modMEM.vhdl" "14b0179c6175a2314bb32c82f75f3795c198d8b4" "20220712130920.809":
+  entity tb_modmem at 1( 0) + 0 on 127;
+  architecture mem_modulo of tb_modmem at 7( 83) + 0 on 128;
