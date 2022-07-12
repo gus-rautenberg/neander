@@ -9,15 +9,16 @@ entity regCarga1bit is
 		nrw    : in  std_logic;
 		s      : out std_logic
 	);
-end regCarga1bit;
+end entity;
 
 architecture reg1bit of regCarga1bit is
 
 	component ffd is
 		port(
-			d      : in  std_logic;
-			clock  : in  std_logic;
-			pr, cl : in  std_logic;
+			d      : in std_logic;
+			nrw    : in std_logic;
+			clk    : in std_logic;
+			pr, cl : in std_logic;
 			q, nq  : out std_logic
 		);
 	end component;
@@ -41,6 +42,6 @@ begin
 	u_mux : mux2x1 port map(dataOut, d, nrw, dataIn);
 	
 	--instancia do reg
-	u_reg : ffd port map(dataIn, clock, pr, cl, dataOut, snq);
+	u_reg : ffd port map(dataIn, nrw, clock, pr, cl, dataOut, snq);
 	
 end architecture;
