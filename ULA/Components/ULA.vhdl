@@ -13,11 +13,7 @@ entity moduloUlA is
         mem_nrw :  in std_logic; -- pra que isso?
         ula_op : in std_logic_vector(2 downto 0);
         --status
-<<<<<<< HEAD:ULA/ULA.vhdl
         flagsNZ : out std_logic_vector(1 downto 0)
-=======
-        flagsNZ : out std_logic_vector(1 downto 0)  
->>>>>>> 50d55c61bc44192bc1c9c9274de8d63e9221981f:ULA/Components/ULA.vhdl
     );
 end entity;
 
