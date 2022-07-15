@@ -53,5 +53,8 @@ begin
     -- MEM
     u_mem : as_ram port map(s_rem2mem,s_mem2rdm, MEM_nrw, cl);
 
+    -- MUX (especial)
+    barramento <= s_rdm2barramento when MEM_nrw = '0' else (others => 'Z');
+    s_mem2rdm <= barramento when MEM_nrw = '1' else (others => 'Z');
 
-    end architecture;
+    end architecture;   
