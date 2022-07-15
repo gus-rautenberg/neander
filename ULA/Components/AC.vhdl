@@ -23,7 +23,6 @@ architecture reg1bit of ac is
 		);
 	end component regCarga1bit;
 
-	--signal ss, sd : std_logic_vector(7 downto 0);
 begin
 	
 	
