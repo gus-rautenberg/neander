@@ -10,7 +10,7 @@ entity counter is
 end entity;
 
 architecture cont of counter is
-    component FFJK is
+    component ffjk is
 	port(
 		j, k   : in  std_logic;
 		clock  : in  std_logic;
@@ -24,9 +24,9 @@ architecture cont of counter is
 
 begin 
 
-    u0: FFJK port map(sj(0), sk(0), clk, reset, '1', sq(0), snq(0));
-    u1: FFJK port map(sj(1), sk(1), clk, reset, '1', sq(1), snq(1));
-    u2: FFJK port map(sj(2), sk(2), clk, reset, '1', sq(2), snq(2));
+    u0: ffjk port map(sj(0), sk(0), clk, reset, '1', sq(0), snq(0));
+    u1: ffjk port map(sj(1), sk(1), clk, reset, '1', sq(1), snq(1));
+    u2: ffjk port map(sj(2), sk(2), clk, reset, '1', sq(2), snq(2));
    
     sj(0) <= '1';
     sk(0) <= '1';
