@@ -1,0 +1,28 @@
+[*]
+[*] GTKWave Analyzer v3.3.104 (w)1999-2020 BSI
+[*] Tue Jul  5 13:37:56 2022
+[*]
+[dumpfile] "/home/biederman/Unioeste/SD/neander/ULA/Components/tb_ac.ghw"
+[dumpfile_mtime] "Tue Jul  5 13:37:04 2022"
+[dumpfile_size] 2240
+[savefile] "/home/biederman/Unioeste/SD/neander/ULA/Test Bench/tb_AC.gtkw"
+[timestart] 0
+[size] 1366 699
+[pos] -1 -1
+*-24.590532 0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] top.
+[treeopen] top.tb_ac.
+[sst_width] 221
+[signals_width] 142
+[sst_expanded] 1
+[sst_vpaned_height] 176
+@28
+#{top.tb_ac.s_dataout[7:0]} top.tb_ac.s_dataout[7] top.tb_ac.s_dataout[6] top.tb_ac.s_dataout[5] top.tb_ac.s_dataout[4] top.tb_ac.s_dataout[3] top.tb_ac.s_dataout[2] top.tb_ac.s_dataout[1] top.tb_ac.s_dataout[0]
+#{top.tb_ac.s_datain[7:0]} top.tb_ac.s_datain[7] top.tb_ac.s_datain[6] top.tb_ac.s_datain[5] top.tb_ac.s_datain[4] top.tb_ac.s_datain[3] top.tb_ac.s_datain[2] top.tb_ac.s_datain[1] top.tb_ac.s_datain[0]
+@29
+top.tb_ac.u_ac.nrw
+@28
+top.tb_ac.u_ac.cl
+top.tb_ac.u_ac.pr
+[pattern_trace] 1
+[pattern_trace] 0
