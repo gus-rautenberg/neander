@@ -51,4 +51,4 @@ begin
     --PC
     u_pc : registrador_8 port map (s_mux2pc, nrw, cl, clk, s_PCatual);
 
-    end architecture;   
+end architecture;   

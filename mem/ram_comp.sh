@@ -11,5 +11,3 @@ ghdl -e tb_as_ram
 wait
 
 ghdl -r tb_as_ram --stop-time=5170ns --wave=tb_as_ram.ghw
-
-

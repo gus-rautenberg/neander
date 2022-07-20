@@ -48,6 +48,4 @@ begin
 
         wait; -- forever!
     end process;
-end architecture; 
-
--- ghdl -a *.vhdl ; ghdl -r tb_mem --wave=tb_mem.ghw --stop-time=300ns
+end architecture;
