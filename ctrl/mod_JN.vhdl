@@ -12,18 +12,18 @@ architecture bhvr of mod_JN is
 begin
 
     -- Barr
-    controle(0) <= 0;
-    controle(1) <= 0;
+    controle(10) <= 0;
+    controle(9) <= 0;
     -- OP
-    controle(2) <= 0;
-    controle(3) <= 0;
-    controle(4) <= 0;
+    controle(8) <= 0;
+    controle(7) <= 0;
+    controle(6) <= 0;
     -- !rw
     controle(5) <= 0; -- PC
-    controle(6) <= 0; -- AC
-    controle(7) <= 0; -- MEM
-    controle(8) <= 0; -- REM
-    controle(9) <= 0; -- RDM
-    controle(10) <= 0; -- RI
+    controle(4) <= 0; -- AC
+    controle(3) <= 0; -- MEM
+    controle(2) <= 0; -- REM
+    controle(1) <= 0; -- RDM
+    controle(0) <= 0; -- RI
 
 end architecture;
