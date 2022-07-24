@@ -24,6 +24,6 @@ begin
     controle(3) <= '0'; -- MEM
     controle(2) <= not(b(2)) and not(b(1)) and not(b(0)); -- REM
     controle(1) <= not(b(2)) and not(b(1)) and b(0); -- RDM
-    controle(0) <= not(b(2) and b(1) and not(b(0)); -- RI
+    controle(0) <= not(b(2)) and b(1) and not(b(0)); -- RI
 
 end architecture;
