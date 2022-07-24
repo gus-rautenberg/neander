@@ -31,11 +31,17 @@ architecture UC_comp of UC is
                             sSta when dec2uc="01000000000" else
                             sLda when dec2uc="00100000000" else
                             sAdd when dec2uc="00010000000" else
-                            sAnd  when dec2uc="00001000000" else
-                            sOr when dec2uc="00000100000" else
+                            sAnd when dec2uc="00001000000" else
+                            sOr  when dec2uc="00000100000" else
                             sNot when dec2uc="00000010000" else
                             sJmp when dec2uc="00000001000" else
                             sJn  when dec2uc="00000000100" else
                             sJz  when dec2uc="00000000010" else
                             sHlt when dec2uc="00000000001" else
                             (others => 'Z');
+
+    -- NOP
+    sNOP: 
+    -- LDA
+
+   
