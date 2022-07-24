@@ -12,8 +12,8 @@ architecture bhvr of mod_NOP is
 begin
 
     -- Barr
-    controle(10) <= not(b(2)) and not(b(1) and b(0));
-    controle(9) <= not(b(2)) and not(b(1) and b(0));
+    controle(10) <= '1';
+    controle(9) <= '1';
     -- OP
     controle(8) <= '0';
     controle(7) <= '0';
