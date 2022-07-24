@@ -65,7 +65,6 @@ begin
     -- u_ULAinterna : ULA_ALU portmap();
     u_ULA: mod_ula port map(s_ac2ula, barramento, s_ula2ac, ULA_op, s_ac2flags);
     --MUX
-    barramento <= s_ac2ula when mem_nrw ='1' else(others => 'Z'); -- Esse é o mux especial
-                                                                  -- O que ele deveria mostrar quando não
-                                                                  -- é o barramento?
+    barramento <= s_ac2ula when mem_nrw ='1' else(others => 'Z');
+    
 end architecture;

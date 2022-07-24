@@ -37,4 +37,3 @@ AUXÍLIO:
 		- Leitura de todas as posições da memória
 	- O arquivo tb_as_ram.gtkw (gtkwave) contém o resultado da simulação do tb_as_ram.vhdl
 	- O arquivo ram_comp.sh analisa, elabora e simula a memória ram.
-

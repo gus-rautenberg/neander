@@ -26,4 +26,3 @@ begin
     end generate reg;
 
 end architecture;
-
