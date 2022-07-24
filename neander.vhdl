@@ -59,7 +59,7 @@ architecture neander_pc of neander is
 begin
 
     -- ULA
-    ula_modulo  : moduloUlA port map();
+    ula_modulo  : moduloUlA port map(barramento, rst, clk, s_bctrl(4), s_bctrl(3), s_bctrl(8 downto 6), flagsNZ);
 
     -- Memória
     mem_modulo  : mem port map(barramento, s_endPC, barramento, s_bctrl(9), s_bctrl(2), s_bctrl(3), s_bctrl(1), rst, clk);

@@ -126,11 +126,11 @@ begin
                     sNot when dec2uc="00000010000" else
                     sJmp when dec2uc="00000001000" else
 
-                    sJmp when dec2uc = ("00000000100") and (intFlags = "10" or intFlags = "11") else    
-                    sJN  when dec2uc = ("00000000100") and (intFlags = "00" or intFlags = "01") else 
+                    sJmp when dec2uc = ("00000000100") and (NZ(1) = '1') else    
+                    sJN  when dec2uc = ("00000000100") and (NZ(1) = '0') else 
 
-                    sJMP when dec2uc = ("00000000010") and (intFlags = "01" or intFlags = "11") else
-                    sJZ when dec2uc = ("00000000010") and (intFlags = "00" or intFlags = "10") else
+                    sJMP when dec2uc = ("00000000010") and (NZ(0) = '1') else
+                    sJZ when dec2uc = ("00000000010") and (NZ(0) = '0' ) else
 
                     sJN  when dec2uc="00000000100" else
                     sJZ  when dec2uc="00000000010" else
