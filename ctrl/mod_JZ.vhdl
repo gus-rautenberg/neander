@@ -13,7 +13,7 @@ begin
 
     -- Barr
     controle(10) <= '0';
-    controle(9) <= '0;
+    controle(9) <= '0';
     -- OP
     controle(8) <= '0';
     controle(7) <= '0';

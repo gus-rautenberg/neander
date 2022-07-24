@@ -25,16 +25,17 @@ architecture cont of counter is
     signal s_nq : std_logic_vector (2 downto 0);
 
 begin
-    q <= s_q;
 
-    u0 : ffjk port map(s_t(0), s_t(0), clk, '1', reset, s_q(0), s_nq(0));
-    u1 : ffjk port map(s_t(1), s_t(1), clk, '1', reset, s_q(1), s_nq(1));
-    u2 : ffjk port map(s_t(2), s_t(2), clk, '1', reset, s_q(2), s_nq(2));
+    u0 : ffjk port map(s_t(0), s_t(0), clk, '1', reset, q(0), s_nq(0));
+    u1 : ffjk port map(s_t(1), s_t(1), clk, '1', reset, q(1), s_nq(1));
+    u2 : ffjk port map(s_t(2), s_t(2), clk, '1', reset, q(2), s_nq(2));
 
     s_t(0) <= '1';
 
     s_t(1) <= s_q(0);
 
     s_t(2) <= s_q(1) and s_q(0);
+
+    q <= s_q;
 
 end architecture;
