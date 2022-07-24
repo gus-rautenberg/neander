@@ -22,7 +22,7 @@ begin
     controle(5) <= not(b(1)) and (b(2) xor b(0)); -- PC
     controle(6) <= b(2) and b(1) and b(0); -- AC
     controle(7) <= 0; -- MEM
-    controle(8) <= (not(b1) and (b(2) xnor b(0))) or (!b(2) and b(1) and b(0)); -- REM
+    controle(8) <= (not(b1) and (b(2) xnor b(0))) or (not(b(2)) and b(1) and b(0)); -- REM
     controle(9) <= (b2 and not(b0)) or (not(b(2)) and not(b(1)) and b(0)); -- RDM
     controle(10) <= not(b(2)) and b(1) and not(b(0)); -- RI
 
