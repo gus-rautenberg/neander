@@ -3,8 +3,8 @@ use ieee.std_logic_1164.all;
 
 entity modPC is
     port(
-        barramento      : inout std_logic_vector(7 downto 0);
-        s_endPC2MEM     : in std_logic_vector(7 downto 0);
+        barramento      : in std_logic_vector(7 downto 0);
+        s_endPC2MEM     : out std_logic_vector(7 downto 0);
         nbarrINC,nrw    : in std_logic;
         cl, clk         : in std_logic
     );
@@ -42,7 +42,7 @@ architecture behavior of modPC is
     signal s_cout : std_logic;
 
 begin
-
+    
     -- MUX 2x8
     u_mux : mux2x8 port map (sadd, barramento, nbarrINC, s_mux2pc);
 
@@ -51,5 +51,7 @@ begin
 
     --PC
     u_pc : registrador_8 port map (s_mux2pc, nrw, cl, clk, s_PCatual);
+
+    s_endPC2MEM <= s_PCatual;
 
 end architecture;
