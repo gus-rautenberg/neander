@@ -64,4 +64,8 @@ begin
         end if;
     end process;
 
+<<<<<<< HEAD
 end architecture;
+=======
+end architecture;
+>>>>>>> 25cd383bebdc3faf784729e4984cc4f221bea286
