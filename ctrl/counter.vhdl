@@ -21,15 +21,15 @@ architecture cont of counter is
     end component;
 
     signal s_t : std_logic_vector (2 downto 0);
-    signal s_q : std_logic_vector (2 downto 0) := "011";
-    signal s_nq : std_logic_vector (2 downto 0) := "100";
+    signal s_q : std_logic_vector (2 downto 0);
+    signal s_nq : std_logic_vector (2 downto 0);
 
 begin
     q <= s_q;
 
-    u_0 : ffjk port map(s_t(0), s_t(0), clk, '1', reset, s_q(0), s_nq(0));
-    u_1 : ffjk port map(s_t(1), s_t(1), clk, '1', reset, s_q(1), s_nq(1));
-    u_2 : ffjk port map(s_t(2), s_t(2), clk, '1', reset, s_q(2), s_nq(2));
+    u0 : ffjk port map(s_t(0), s_t(0), clk, '1', reset, s_q(0), s_nq(0));
+    u1 : ffjk port map(s_t(1), s_t(1), clk, '1', reset, s_q(1), s_nq(1));
+    u2 : ffjk port map(s_t(2), s_t(2), clk, '1', reset, s_q(2), s_nq(2));
 
     s_t(0) <= '1';
 

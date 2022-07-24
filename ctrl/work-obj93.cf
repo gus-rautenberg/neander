@@ -8,6 +8,6 @@ file . "decode.vhdl" "9fdb3eb2bbd51bcaadd031eeed43883c723c3a61" "20220715174644.
 file . "tb_decode.vhdl" "d27da602bfca637d0e07a0ff19c2c7df41a5163f" "20220715175348.101":
   entity tb_decode at 1( 0) + 0 on 19;
   architecture behavior of tb_decode at 7( 77) + 0 on 20;
-file . "counter.vhdl" "7c8f1b2317ccdbcbdcf82fcd184583954000d94c" "20220724025555.653":
-  entity counter at 1( 0) + 0 on 51;
-  architecture cont of counter at 12( 192) + 0 on 52;
+file . "counter.vhdl" "24f131ed7d07420107af8fd501248d566ce34b9e" "20220724030341.451":
+  entity counter at 1( 0) + 0 on 55;
+  architecture bhvr of counter at 12( 192) + 0 on 56;

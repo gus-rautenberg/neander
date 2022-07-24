@@ -26,6 +26,7 @@ begin
 
     tb : process
     begin
+        
         s_reset <= '1';
         wait for ciclo_clock;
 
