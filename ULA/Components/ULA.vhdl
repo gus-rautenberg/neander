@@ -66,8 +66,4 @@ begin
     u_ULA: mod_ula port map(s_ac2ula, barramento, s_ula2ac, ULA_op, s_ac2flags);
     --MUX
     barramento <= s_ac2ula when mem_nrw ='1' else(others => 'Z');
-<<<<<<< HEAD
-    
-=======
->>>>>>> cb1f1d020f9a24ea201183b0e8ac41890e0a9c16
 end architecture;

@@ -27,16 +27,17 @@ begin
     tb : process
     begin
         
-        s_reset <= '1';
+        s_reset <= '0';
         wait for ciclo_clock;
 
-        s_reset <= '0';
-        wait for 16*ciclo_clock;
-
         s_reset <= '1';
+        wait for 14*ciclo_clock;
+
+        s_reset <= '0';
         wait for ciclo_clock;
 
-        s_reset <= '0';
+        s_reset <= '1';
         wait;
+
     end process;
 end architecture;

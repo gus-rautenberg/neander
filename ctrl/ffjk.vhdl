@@ -63,4 +63,5 @@ begin
                 snq <= 'X';
         end if;
     end process;
+
 end architecture;
