@@ -1,7 +1,7 @@
 library ieee;
 use ieee.std_logic_1164.all; 
 
-entity UC is
+entity CU is
     port(
         dec2uc              : in std_logic_vector(10 downto 0);
         cl, clk             : in std_logic;
@@ -10,7 +10,7 @@ entity UC is
     );
 end entity;
 
-architecture UC_comp of UC is
+architecture CU_comp of CU is
 
     component counter is
         port(
