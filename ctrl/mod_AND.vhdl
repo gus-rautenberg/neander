@@ -1,14 +1,14 @@
 library ieee;
 use ieee.std_logic_1164.all;
 
-entity mod_LDA is
+entity mod_AND is
     port(
         b : in std_logic_vector(2 downto 0);
         controle : out std_logic_vector(10 downto 0);
     );
 end entity;
 
-architecture bhvr of mod_LDA is
+architecture bhvr of mod_AND is
 begin
 
     -- Barr
