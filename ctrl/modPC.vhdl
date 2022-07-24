@@ -3,8 +3,8 @@ use ieee.std_logic_1164.all;
 
 entity pc is
     port(
-        barramento      : inout std_logic_vector(7 downto 0);
-        s_endPC2MEM     : in std_logic_vector(7 downto 0);
+        barramento      : in std_logic_vector(7 downto 0);
+        s_endPC2MEM     : out std_logic_vector(7 downto 0);
         nbarrINC,nrw    : in std_logic;
         cl, clk         : in std_logic
     );
@@ -38,17 +38,18 @@ architecture behavior of pc is
         );
     end component mux2x8;
 
-    signal sadd, s_mux2pc, s_PCatual : std_logic_vector(7 downto 0);
+    signal sadd, c_out, s_mux2pc, s_PCatual : std_logic_vector(7 downto 0);
 
 begin
-
+    
     -- MUX 2x8
     u_mux : mux2x8 port map (sadd, barramento, nbarrINC, s_mux2pc);
 
     -- ADD
-    u_add : modADD port map ("00000001", s_PCatual);
+    u_add : modADD port map ("00000001", s_PCatual, '0', sadd, c_out);
 
     --PC
     u_pc : registrador_8 port map (s_mux2pc, nrw, cl, clk, s_PCatual);
+    s_endPC2MEM <= s_PCatual;
 
 end architecture;
