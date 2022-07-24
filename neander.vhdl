@@ -19,12 +19,18 @@ architecture neander_pc of neander is
         );
     end component;
 
-    component ula is
+    component moduloUlA is
         port(
-            barramento              : inout std_logic_vector(7 downto 0);
-            ULA_op                  : in std_logic_vector(2 downto 0);
-            AC_nrw,MEM_nrw,rst,clk  : in std_logic;
-            interface_flags         : out std_logic_vector(1 downto 0)
+            --dados
+            barramento : inout std_logic_vector(7 downto 0);
+
+            --controle
+            rsr, clk : in std_logic;
+            nrw : in std_logic; -- nrw serve pra flag e para ac
+            mem_nrw :  in std_logic; -- pra que isso?
+            ula_op : in std_logic_vector(2 downto 0);
+            --status
+            flagsNZ : out std_logic_vector(1 downto 0)
         );
     end component;
 
@@ -39,9 +45,10 @@ architecture neander_pc of neander is
 
     component pc is
         port(
-            barramento               : in std_logic_vector(7 downto 0);
-            barr_INC, PC_nrw, cl, clk : in std_logic;
-            endout                   : out std_logic_vector(7 downto 0)
+            barramento      : in std_logic_vector(7 downto 0);
+            s_endPC2MEM     : out std_logic_vector(7 downto 0);
+            nbarrINC,nrw    : in std_logic;
+            cl, clk         : in std_logic
         );
     end component;
 
@@ -52,16 +59,16 @@ architecture neander_pc of neander is
 begin
 
     -- ULA
-    ula_modulo  : ula port map(barramento,s_bctrl(8 downto 6),s_bctrl(4),s_bctrl(3),rst, clk, flagsNZ);
+    ula_modulo  : moduloUlA port map(barramento,s_bctrl(8 downto 6),s_bctrl(4),s_bctrl(3),rst, clk, flagsNZ);
 
     -- Memória
-    mem_modulo  : mem port map(barramento, s_endPC,barramento, s_bctrl(9), s_bctrl(2), s_bctrl(3), s_bctrl(1), rst, clk);
+    mem_modulo  : mem port map(barramento, s_endPC, barramento, s_bctrl(9), s_bctrl(2), s_bctrl(3), s_bctrl(1), rst, clk);
 
     -- PC
-    pc_modulo   : pc port map(barramento, s_bctrl(10), s_bctrl(5), rst, clk, s_endPC);
+    pc_modulo   : pc port map(barramento, s_endPC, s_bctrl(10), s_bctrl(5), rst, clk);
 
     -- UC
-    UC_modulo   : controle port map(barramento, flagsNZ, s_bctrl(0), rst, clk, s_bctrl);
+    cu_modulo   : controller port map(barramento, flagsNZ, s_bctrl(0), rst, clk, s_bctrl);
     
     
 end architecture neander_pc;
