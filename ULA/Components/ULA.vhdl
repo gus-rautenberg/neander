@@ -9,8 +9,8 @@ entity moduloUlA is
 
         --controle
         rsr, clk : in std_logic;
-        nrw : in std_logic; -- nrw serve pra flag e para ac
-        mem_nrw :  in std_logic; -- pra que isso?
+        nrw : in std_logic;
+        mem_nrw :  in std_logic;
         ula_op : in std_logic_vector(2 downto 0);
         --status
         flagsNZ : out std_logic_vector(1 downto 0)
@@ -66,5 +66,8 @@ begin
     u_ULA: mod_ula port map(s_ac2ula, barramento, s_ula2ac, ULA_op, s_ac2flags);
     --MUX
     barramento <= s_ac2ula when mem_nrw ='1' else(others => 'Z');
+<<<<<<< HEAD
     
+=======
+>>>>>>> cb1f1d020f9a24ea201183b0e8ac41890e0a9c16
 end architecture;
