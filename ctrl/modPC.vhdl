@@ -1,7 +1,7 @@
 library ieee;
 use ieee.std_logic_1164.all; 
 
-entity pc is
+entity modPC is
     port(
         barramento      : in std_logic_vector(7 downto 0);
         s_endPC2MEM     : out std_logic_vector(7 downto 0);
@@ -10,7 +10,7 @@ entity pc is
     );
 end entity;
 
-architecture behavior of pc is
+architecture behavior of modPC is
     component registrador_8 is 
         port (
             datain      : in std_logic_vector(7 downto 0);
@@ -38,7 +38,8 @@ architecture behavior of pc is
         );
     end component mux2x8;
 
-    signal sadd, c_out, s_mux2pc, s_PCatual : std_logic_vector(7 downto 0);
+    signal sadd, s_mux2pc, s_PCatual : std_logic_vector(7 downto 0);
+    signal s_cout : std_logic;
 
 begin
     
@@ -46,10 +47,11 @@ begin
     u_mux : mux2x8 port map (sadd, barramento, nbarrINC, s_mux2pc);
 
     -- ADD
-    u_add : modADD port map ("00000001", s_PCatual, '0', sadd, c_out);
+    u_add : modADD port map ("00000001", s_PCatual, '0', sadd, s_cout);
 
     --PC
     u_pc : registrador_8 port map (s_mux2pc, nrw, cl, clk, s_PCatual);
+
     s_endPC2MEM <= s_PCatual;
 
 end architecture;

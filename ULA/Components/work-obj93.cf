@@ -1,58 +1,58 @@
 v 4
-file . "ULA.vhdl" "2d475006546a4eebbd75bd93d1d0e9cf7751d582" "20220711192935.384":
-  entity moduloula at 2( 27) + 0 on 1043;
-  architecture calculater of moduloula at 21( 487) + 0 on 1044;
-file . "tb_alu.vhdl" "38a676fc51bf09f24138928ef35e477bdcc1713d" "20220711192935.381":
-  entity tb_alu at 1( 0) + 0 on 1037;
-  architecture behavior of tb_alu at 7( 74) + 0 on 1038;
-file . "tb_ula.vhdl" "8c209af3ffad76baf72fa11f51c6e2f3dd5f5845" "20220711192935.383":
-  entity tb_ula at 1( 0) + 0 on 1041;
-  architecture behavior of tb_ula at 7( 74) + 0 on 1042;
-file . "mod_ula.vhdl" "e5e544bfd333b4f7212867866f159133bbfffd21" "20220711192935.375":
-  entity mod_ula at 2( 27) + 0 on 1027;
-  architecture supercalc of mod_ula at 17( 369) + 0 on 1028;
-file . "modADD.vhdl" "43fca3ecc7f3e9639124855c45ecaac86fdcc9d3" "20220711192935.371":
-  entity modadd at 1( 0) + 0 on 1019;
-  architecture comuta of modadd at 14( 263) + 0 on 1020;
-file . "AC.vhdl" "3ed0932620ec3be16c424eb1bbe813c062e2221c" "20220711192935.364":
-  entity ac at 1( 0) + 0 on 1009;
-  architecture reg1bit of ac at 14( 244) + 0 on 1010;
-file . "fadder.vhdl" "9eb8ee7e57295fd13328d1b45c76bd2d5a654aeb" "20220711192935.366":
-  entity fadder at 1( 0) + 0 on 1011;
-  architecture sum of fadder at 11( 157) + 0 on 1012;
-file . "ffd.vhdl" "214e634655610a1f9f96947d0531c393499c83c1" "20220711192935.367":
-  entity ffd at 1( 0) + 0 on 1013;
-  architecture latch of ffd at 14( 276) + 0 on 1014;
-file . "ffjk.vhdl" "be658ef92603aba35a9534fd7f14a8b44c35033b" "20220711192935.369":
-  entity ffjk at 2( 70) + 0 on 1015;
-  architecture latch of ffjk at 14( 316) + 0 on 1016;
-file . "flagNZ.vhdl" "51eaf4d01eb54084b197e1d25f6b9f8f3a553165" "20220711192935.370":
-  entity flagnz at 1( 0) + 0 on 1017;
-  architecture reg1bit of flagnz at 14( 252) + 0 on 1018;
-file . "modAND.vhdl" "546bf0aa2afe21d4f19836d365b03e2046a229bd" "20220711192935.372":
-  entity modand at 1( 0) + 0 on 1021;
-  architecture comuta of modand at 12( 229) + 0 on 1022;
-file . "modNOT.vhdl" "840d2a070c8401877b67016bab3e79017fafd123" "20220711192935.373":
-  entity modnot at 1( 0) + 0 on 1023;
-  architecture comuta of modnot at 11( 184) + 0 on 1024;
-file . "modOR.vhdl" "6b05bbab97b8e9fea98243f7de3e9f448c27c132" "20220711192935.374":
-  entity modor at 1( 0) + 0 on 1025;
-  architecture comuta of modor at 12( 227) + 0 on 1026;
-file . "mux2x1.vhdl" "ad9436b934b6cb046115f55540a1607276fad8c5" "20220711192935.376":
-  entity mux2x1 at 1( 0) + 0 on 1029;
-  architecture bhvr of mux2x1 at 13( 186) + 0 on 1030;
-file . "mux5x8.vhdl" "3575fa57bb361127969441058988c37a8314a015" "20220711192935.377":
-  entity mux5x8 at 1( 0) + 0 on 1031;
-  architecture bhvr of mux5x8 at 16( 427) + 0 on 1032;
-file . "regCarga1bit.vhdl" "e279fba21d8f5ce3bb4ade843fc8c6fe34ff508a" "20220711192935.378":
-  entity regcarga1bit at 1( 0) + 0 on 1033;
-  architecture reg1bit of regcarga1bit at 14( 220) + 0 on 1034;
-file . "tb_AC.vhdl" "bc2fe2231c858004ac6ac6b0293e3c4eee65e684" "20220711192935.379":
-  entity tb_ac at 1( 0) + 0 on 1035;
-  architecture behavior of tb_ac at 7( 73) + 0 on 1036;
-file . "tb_regCarga.vhdl" "e3d1c8d433cb80787f6168288756e021f552a7e7" "20220711192935.382":
-  entity tb_regcarga at 1( 0) + 0 on 1039;
-  architecture behavior of tb_regcarga at 7( 79) + 0 on 1040;
 file . "ULAinterno.vhdl" "cd1422a1e1d3987199ce47c28a86a445acbc02a4" "20220705133701.851":
   entity ulainterno at 2( 30) + 0 on 399;
   architecture supercalc of ulainterno at 17( 375) + 0 on 400;
+file . "tb_regCarga.vhdl" "e3d1c8d433cb80787f6168288756e021f552a7e7" "20220724212015.547":
+  entity tb_regcarga at 1( 0) + 0 on 1075;
+  architecture behavior of tb_regcarga at 7( 79) + 0 on 1076;
+file . "tb_AC.vhdl" "bc2fe2231c858004ac6ac6b0293e3c4eee65e684" "20220724212015.544":
+  entity tb_ac at 1( 0) + 0 on 1071;
+  architecture behavior of tb_ac at 7( 73) + 0 on 1072;
+file . "regCarga1bit.vhdl" "5cc719cd3fa61082b1b7bc42fd5183f46e00367c" "20220724212015.543":
+  entity regcarga1bit at 1( 0) + 0 on 1069;
+  architecture reg1bit of regcarga1bit at 14( 220) + 0 on 1070;
+file . "mux5x8.vhdl" "eff393c541f084d56ac665577f5d4400a72d23ec" "20220724212015.542":
+  entity mux5x8 at 1( 0) + 0 on 1067;
+  architecture bhvr of mux5x8 at 16( 427) + 0 on 1068;
+file . "mux2x1.vhdl" "ad9436b934b6cb046115f55540a1607276fad8c5" "20220724212015.540":
+  entity mux2x1 at 1( 0) + 0 on 1065;
+  architecture bhvr of mux2x1 at 13( 186) + 0 on 1066;
+file . "modOR.vhdl" "6b05bbab97b8e9fea98243f7de3e9f448c27c132" "20220724212015.537":
+  entity modor at 1( 0) + 0 on 1061;
+  architecture comuta of modor at 12( 227) + 0 on 1062;
+file . "modNOT.vhdl" "840d2a070c8401877b67016bab3e79017fafd123" "20220724212015.536":
+  entity modnot at 1( 0) + 0 on 1059;
+  architecture comuta of modnot at 11( 184) + 0 on 1060;
+file . "modAND.vhdl" "546bf0aa2afe21d4f19836d365b03e2046a229bd" "20220724212015.536":
+  entity modand at 1( 0) + 0 on 1057;
+  architecture comuta of modand at 12( 229) + 0 on 1058;
+file . "flagNZ.vhdl" "51eaf4d01eb54084b197e1d25f6b9f8f3a553165" "20220724212015.533":
+  entity flagnz at 1( 0) + 0 on 1053;
+  architecture reg1bit of flagnz at 14( 252) + 0 on 1054;
+file . "ffjk.vhdl" "4767e9c1c27acc2180de27cd5f6f1226cb1e7bcf" "20220724212015.532":
+  entity ffjk at 2( 70) + 0 on 1051;
+  architecture latch of ffjk at 14( 316) + 0 on 1052;
+file . "ffd.vhdl" "dc07e09c370383f640010df53d018f59a4f6edb7" "20220724212015.530":
+  entity ffd at 1( 0) + 0 on 1049;
+  architecture latch of ffd at 14( 276) + 0 on 1050;
+file . "fadder.vhdl" "9eb8ee7e57295fd13328d1b45c76bd2d5a654aeb" "20220724212015.529":
+  entity fadder at 1( 0) + 0 on 1047;
+  architecture sum of fadder at 11( 157) + 0 on 1048;
+file . "AC.vhdl" "22ec2fa90c81d73e2578338e12395294c08920b6" "20220724212015.527":
+  entity ac at 1( 0) + 0 on 1045;
+  architecture reg1bit of ac at 14( 244) + 0 on 1046;
+file . "modADD.vhdl" "43fca3ecc7f3e9639124855c45ecaac86fdcc9d3" "20220724212015.535":
+  entity modadd at 1( 0) + 0 on 1055;
+  architecture comuta of modadd at 14( 263) + 0 on 1056;
+file . "mod_ula.vhdl" "e5e544bfd333b4f7212867866f159133bbfffd21" "20220724212015.539":
+  entity mod_ula at 2( 27) + 0 on 1063;
+  architecture supercalc of mod_ula at 17( 369) + 0 on 1064;
+file . "tb_ula.vhdl" "8c209af3ffad76baf72fa11f51c6e2f3dd5f5845" "20220724212015.548":
+  entity tb_ula at 1( 0) + 0 on 1077;
+  architecture behavior of tb_ula at 7( 74) + 0 on 1078;
+file . "tb_alu.vhdl" "38a676fc51bf09f24138928ef35e477bdcc1713d" "20220724212015.546":
+  entity tb_alu at 1( 0) + 0 on 1073;
+  architecture behavior of tb_alu at 7( 74) + 0 on 1074;
+file . "ULA.vhdl" "d5f01395aee1b94c8a0dab34e2ba5a01e9418dd9" "20220724212015.549":
+  entity moduloula at 2( 27) + 0 on 1079;
+  architecture calculater of moduloula at 20( 427) + 0 on 1080;

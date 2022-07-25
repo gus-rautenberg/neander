@@ -25,5 +25,4 @@ begin
     controle(2) <= not b(2) and (b(1) xnor b(0)); -- REM (not b(2) and not b(1) and not b(0)) or (not b(2) and b(1) and b(0))
     controle(1) <= not b(1) and (b(2) xor b(0)); -- RDM
     controle(0) <= not b(2) and b(1) and not b(0); -- RI
-
 end architecture;
