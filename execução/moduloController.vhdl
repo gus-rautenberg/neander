@@ -29,7 +29,7 @@ architecture controle_modulo of controller is
         );
     end component;
 
-    component UC is
+    component CU is
         port(
             dec2uc              : in std_logic_vector(10 downto 0);
             cl, clk             : in std_logic;
@@ -50,6 +50,6 @@ architecture controle_modulo of controller is
     dec : decode port map(ri2decode,decode2UC);
 
     -- UC
-    uc_comp : UC port map(decode2uc,cl,clk, flagNZ,barramento_controle);
+    uc_comp : CU port map(decode2uc,cl,clk, flagNZ,barramento_controle);
     
 end architecture controle_modulo;

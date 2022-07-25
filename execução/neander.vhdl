@@ -43,7 +43,7 @@ architecture neander_pc of neander is
         );
     end component;
 
-    component pc is
+    component modPC is
         port(
             barramento      : in std_logic_vector(7 downto 0);
             s_endPC2MEM     : out std_logic_vector(7 downto 0);
@@ -65,7 +65,7 @@ begin
     mem_modulo  : mem port map(barramento, s_endPC, barramento, s_bctrl(9), s_bctrl(2), s_bctrl(3), s_bctrl(1), rst, clk);
 
     -- PC
-    pc_modulo   : pc port map(barramento, s_endPC, s_bctrl(10), s_bctrl(5), rst, clk);
+    pc_modulo   : modPC port map(barramento, s_endPC, s_bctrl(10), s_bctrl(5), rst, clk);
 
     -- UC
     cu_modulo   : controller port map(barramento, flagsNZ, s_bctrl(0), rst, clk, s_bctrl);

@@ -11,11 +11,13 @@ entity mem is
 end entity;
 
 architecture behavior of mem is
-    component registrador_8 is 
-        port (
-            datain      : in std_logic_vector(7 downto 0);
-            nrw,cl,clk  : in std_logic;
-            dataout     : out std_logic_vector(7 downto 0)
+    component registrador_8 is
+        port(
+            d      : in  std_logic_vector(7 downto 0);
+            clock  : in  std_logic;
+            cl     : in  std_logic;
+            nrw    : in  std_logic;
+            s      : out std_logic_vector(7 downto 0)
         );
     end component;
 
@@ -45,10 +47,10 @@ begin
     u_mux : mux2x8 port map (end_barr, end_PC, barrPC, s_mux2rem);
 
     -- REM
-    u_rem : registrador_8 port map (s_mux2rem,REM_nrw, cl, clk, s_rem2mem);
+    u_rem : registrador_8 port map (s_mux2rem, clk, cl, REM_nrw, s_rem2mem);
 
     -- RDM
-    u_rdm : registrador_8 port map(s_mem2rdm, RDM_nrw, cl, clk, s_rdm2barramento);
+    u_rdm : registrador_8 port map(s_mem2rdm, clk, cl, RDM_nrw, s_rdm2barramento);
 
     -- MEM
     u_mem : as_ram port map(s_rem2mem,s_mem2rdm, MEM_nrw, cl);

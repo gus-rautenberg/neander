@@ -11,11 +11,13 @@ entity modPC is
 end entity;
 
 architecture behavior of modPC is
-    component registrador_8 is 
-        port (
-            datain      : in std_logic_vector(7 downto 0);
-            nrw,cl,clk  : in std_logic;
-            dataout     : out std_logic_vector(7 downto 0)
+    component registrador_8 is
+        port(
+            d      : in  std_logic_vector(7 downto 0);
+            clock  : in  std_logic;
+            cl     : in  std_logic;
+            nrw    : in  std_logic;
+            s      : out std_logic_vector(7 downto 0)
         );
     end component;
 
@@ -44,13 +46,13 @@ architecture behavior of modPC is
 begin
     
     -- MUX 2x8
-    u_mux : mux2x8 port map (sadd, barramento, nbarrINC, s_mux2pc);
+    u_mux : mux2x8 port map (barramento, sadd, nbarrINC, s_mux2pc);
 
     -- ADD
     u_add : modADD port map ("00000001", s_PCatual, '0', sadd, s_cout);
 
     --PC
-    u_pc : registrador_8 port map (s_mux2pc, nrw, cl, clk, s_PCatual);
+    u_pc : registrador_8 port map (s_mux2pc, clk, cl, nrw, s_PCatual);
 
     s_endPC2MEM <= s_PCatual;
 
