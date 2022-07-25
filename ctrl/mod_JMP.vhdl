@@ -12,18 +12,17 @@ architecture bhvr of mod_JMP is
 begin
 
     -- Barr
-    controle(10) <= '0';
-    controle(9) <= '0';
+    controle(10) <= not b(2) or (b(1) and not b(0));
+    controle(9) <= '1';
     -- OP
     controle(8) <= '0';
     controle(7) <= '0';
     controle(6) <= '0';
     -- !rw
-    controle(5) <= '0'; -- PC
+    controle(5) <= not b(1) and b(0); -- PC
     controle(4) <= '0'; -- AC
     controle(3) <= '0'; -- MEM
-    controle(2) <= '0'; -- REM
-    controle(1) <= '0'; -- RDM
-    controle(0) <= '0'; -- RI
-
+    controle(2) <= not b(2) and (b(1) xnor b(0)); -- REM (not b(2) and not b(1) and not b(0)) or (not b(2) and b(1) and b(0))
+    controle(1) <= not b(1) and (b(2) xor b(0)); -- RDM
+    controle(0) <= not b(2) and b(1) and not b(0); -- RI
 end architecture;

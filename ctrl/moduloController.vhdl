@@ -43,6 +43,7 @@ architecture controle_modulo of controller is
 
     begin
     -- RI
+
     RI_reg : ri port map(barramento, clk, cl, RI_nrw, ri2decode);
 
     -- Decodificador
