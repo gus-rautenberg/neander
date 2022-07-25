@@ -32,4 +32,4 @@ begin
     u_td : ffjk port map(sd, nj, clk, pr, cl, q, nq);
     nj <= not(d);
 
-end architecture; 
+end architecture;

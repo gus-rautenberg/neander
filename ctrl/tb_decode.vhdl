@@ -24,9 +24,6 @@ begin
     tb : process
     begin
 
-        s_instrIn <= "00000010";
-        wait for ciclo_clock;
-
         s_instrIn <= "00000000";
         wait for ciclo_clock;
 

@@ -21,6 +21,6 @@ begin
         sor when sel = "010" else
         sand when sel = "011" else
         snot when sel = "100" else
-        (others => 'Z');-- "ZZZ"; -- Erro aqui
+        (others => 'Z');
 
 end architecture;

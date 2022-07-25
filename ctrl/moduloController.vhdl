@@ -40,8 +40,13 @@ architecture controle_modulo of controller is
 
     signal ri2decode : std_logic_vector(7 downto 0);
     signal decode2uc : std_logic_vector(10 downto 0);
-begin
+
+    begin
     -- RI
+<<<<<<< HEAD
+=======
+
+>>>>>>> f6be01a0dddac65089b769ac4ebe8248dd7c3389
     RI_reg : ri port map(barramento, clk, cl, RI_nrw, ri2decode);
 
     -- Decodificador
@@ -49,6 +54,5 @@ begin
 
     -- UC
     uc_comp : UC port map(decode2uc,cl,clk, flagNZ,barramento_controle);
-    
     
 end architecture controle_modulo;
