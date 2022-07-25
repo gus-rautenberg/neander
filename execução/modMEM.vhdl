@@ -59,4 +59,4 @@ begin
     barramento <= s_rdm2barramento when MEM_nrw = '0' else (others => 'Z');
     s_mem2rdm <= barramento when MEM_nrw = '1' else (others => 'Z');
 
-    end architecture;   
+end architecture;   

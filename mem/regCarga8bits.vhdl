@@ -3,26 +3,32 @@ use ieee.std_logic_1164.all;
 
 entity registrador_8 is
     port(
-        datain      : in std_logic_vector(7 downto 0);
-        nrw,cl,clk  : in std_logic;
-        dataout     : out std_logic_vector(7 downto 0)
-    );
+		d      : in  std_logic_vector(7 downto 0);
+		clock  : in  std_logic;
+		cl     : in  std_logic;
+		nrw    : in  std_logic;
+		s      : out std_logic_vector(7 downto 0)
+	);
 end entity;
 
-architecture registrador_comp of registrador_8 is
-    component ffd is
-        port(
-            d      : in std_logic;
-            nrw    : in std_logic;
-            clk    : in std_logic;
-            pr, cl : in std_logic;
-            q, nq  : out std_logic
-        );
-    end component;
+architecture reg1bit of registrador_8 is
+
+	component regCarga1bit is
+		port(
+			d      : in  std_logic;
+			clock  : in  std_logic;
+			pr, cl : in  std_logic;
+			nrw    : in  std_logic;
+			s      : out std_logic
+		);
+	end component regCarga1bit;
 
 begin
-    reg : for i in 7 downto 0 generate
-        r : ffd port map(datain(i), nrw,clk, '1', cl, dataout(i));
-    end generate reg;
+	
+	gen_ac : for i in 0 to 7 generate
+		
+		u_reg : regCarga1bit port map(d(i), clock, '1', cl, nrw, s(i));
 
+	end generate gen_ac;
+	
 end architecture;
