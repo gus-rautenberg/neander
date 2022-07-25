@@ -23,7 +23,7 @@ begin
     -- !rw
 
     controle(5) <= not b(1) and (b(2) xor b(0)); -- PC
-    controle(4) <= 0; -- AC
+    controle(4) <= '0'; -- AC
     controle(3) <= b(2) and b(1) and not b(0); -- MEM
     controle(2) <= (b(0) and (b(2) xor b(1))) or (not(b(2)) and not(b(1)) and not(b(0))); -- REM
     controle(1) <= not b(1) and (b(2) xor b(0)); -- RDM

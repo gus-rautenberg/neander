@@ -44,7 +44,7 @@ architecture behavior of modPC is
 begin
     
     -- MUX 2x8
-    u_mux : mux2x8 port map (sadd, barramento, nbarrINC, s_mux2pc);
+    u_mux : mux2x8 port map (barramento, sadd, nbarrINC, s_mux2pc);
 
     -- ADD
     u_add : modADD port map ("00000001", s_PCatual, '0', sadd, s_cout);
