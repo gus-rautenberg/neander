@@ -50,6 +50,6 @@ architecture controle_modulo of controller is
     dec : decode port map(ri2decode,decode2UC);
 
     -- UC
-    uc_comp : CU port map(decode2uc,cl,clk, flagNZ,barramento_controle);
+    cu_comp : CU port map(decode2uc,cl,clk, flagNZ,barramento_controle);
     
 end architecture controle_modulo;
