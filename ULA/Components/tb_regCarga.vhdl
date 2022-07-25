@@ -4,7 +4,7 @@ use ieee.std_logic_1164.all;
 entity tb_regCarga is
 end entity;
 
-architecture behavior of tb_reg is
+architecture behavior of tb_regCarga is
     constant ciclo_clock : time := 20 ns;
 
     component reg is

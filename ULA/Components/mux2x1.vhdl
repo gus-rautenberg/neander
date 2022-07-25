@@ -12,8 +12,8 @@ end entity mux2x1;
 
 architecture bhvr of mux2x1 is
 
-    begin
+begin
 
     z <= a when sel='0' else b;
 
-    end architecture;
+end architecture;

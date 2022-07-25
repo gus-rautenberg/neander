@@ -1,7 +1,7 @@
 library ieee;
 use ieee.std_logic_1164.all;
 
-entity ac is
+entity ri is
 	port(
 		d      : in  std_logic_vector(7 downto 0);
 		clock  : in  std_logic;
@@ -11,7 +11,7 @@ entity ac is
 	);
 end entity;
 
-architecture reg1bit of ac is
+architecture reg1bit of ri is
 
 	component regCarga1bit is
 		port(
